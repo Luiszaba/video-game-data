@@ -3,4 +3,6 @@ class User < ApplicationRecord
   validates :email, uniqueness: {case_sensitive: false}, presence: true
   validates :firstname, :lastname, presence: true
 
+  has_many :wishlist_games
+  has_many :games, through: :wishlist_games
 end
