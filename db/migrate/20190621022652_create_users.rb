@@ -5,8 +5,6 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :password_digest
       t.string :firstname
       t.string :lastname
-      t.datetime "created_at", null: false
-      t.datetime "updated_at", null: false
       t.timestamps
     end
   end

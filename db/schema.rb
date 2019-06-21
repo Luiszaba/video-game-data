@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_20_173032) do
+ActiveRecord::Schema.define(version: 2019_06_21_022652) do
 
   create_table "games", force: :cascade do |t|
     t.string "name"
@@ -21,10 +21,19 @@ ActiveRecord::Schema.define(version: 2019_06_20_173032) do
     t.string "cover"
     t.string "player_perspective"
     t.string "slug"
-    t.string "stoyline"
+    t.string "storyline"
     t.string "summary"
     t.string "url"
     t.string "video"
+    t.string "platform"
+    t.integer "year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "secrets", force: :cascade do |t|
+    t.string "content"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
