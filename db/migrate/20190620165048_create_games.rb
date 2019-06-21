@@ -9,10 +9,12 @@ class CreateGames < ActiveRecord::Migration[5.2]
       t.string :cover
       t.string :player_perspective
       t.string :slug
-      t.string :stoyline
+      t.string :storyline
       t.string :summary
       t.string :url
       t.string :video
+      t.string :platform
+      t.integer :year
       t.timestamps
     end
   end
