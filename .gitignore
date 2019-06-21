@@ -21,6 +21,8 @@
 /storage/*
 !/storage/.keep
 
+.env
+
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
