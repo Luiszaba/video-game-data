@@ -1,8 +1,9 @@
 import React from 'react';
-import './App.css';
+import './styles/App.css';
 import Login from './components/Login'
 import Secrets from './components/Secrets'
-
+import GameBrowser from './components/gameBrowserContainer'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 class App extends React.Component {
 
@@ -36,7 +37,7 @@ componentDidMount() {
       })
     }
   })
-  
+
   }
 }
 
@@ -106,6 +107,10 @@ componentDidMount() {
     const { currentUser } = this.state
     return (
       <div className="App">
+      <MuiThemeProvider>
+        <GameBrowser />
+      </MuiThemeProvider>
+
         <h2>{currentUser ? `Logged in as ${currentUser.firstname} ${currentUser.lastname}` : "Not logged in."}</h2>
 
       <Login
